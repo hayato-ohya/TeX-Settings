@@ -1,0 +1,108 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "wsl.exe",
+            "args": [
+                "pdflatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "`wslpath %DOC%`"
+            ]
+            },
+        {
+            "name": "bibtex",
+            "command": "wsl.exe",
+            "args": [
+                "bibtex",
+                "`wslpath %DOCFILE%`"
+            ]
+        },
+        {
+            "name":"ptex2pdf",
+            "command": "wsl.exe",
+            "args": [
+                "ptex2pdf",
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "`wslpath %DOC%`"
+            ]
+        },
+        {
+            "name":"ptex2pdf (uplatex)",
+            "command": "wsl.exe",
+            "args": [
+                "ptex2pdf",
+                "-l",
+                "-u",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "`wslpath %DOC%`"
+            ]
+        },
+        {
+            "name": "pbibtex",
+            "command": "wsl.exe",
+            "args": [
+                "pbibtex",
+                "-kanji=utf8",
+                "`wslpath %DOCFILE%`"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ptex2pdf*2",
+            "tools": [
+                "ptex2pdf",
+                "ptex2pdf"
+            ]
+        },
+        {
+            "name": "ptex2pdf -> pbibtex -> ptex2pdf*2",
+            "tools": [
+                "ptex2pdf",
+                "pbibtex",
+                "ptex2pdf",
+                "ptex2pdf"
+            ]
+        },
+        {
+            "name": "ptex2pdf (uplatex) *2",
+            "tools": [
+                "ptex2pdf (uplatex)",
+                "ptex2pdf (uplatex)"
+            ]
+        },
+        {
+            "name": "ptex2pdf (uplatex) -> pbibtex -> ptex2pdf (uplatex) *2",
+            "tools": [
+                "ptex2pdf (uplatex)",
+                "pbibtex",
+                "ptex2pdf (uplatex)",
+                "ptex2pdf (uplatex)"
+            ]
+        },
+        {
+            "name": "pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ],
+    "files.autoGuessEncoding": true,
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.chktex.enabled": true
+}
