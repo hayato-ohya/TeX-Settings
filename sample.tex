@@ -1,53 +1,66 @@
 \documentclass[a4j,12pt]{jreport}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper}
-\title{ {\LaTeX} 動作確認テスト・サンプルファイル}
-\author{情報リテラシTA}
+\title{ {\LaTeX} 動作確認用ファイル}
+\author{大矢 隼士}
 \date{\today}
 \begin{document}
     \maketitle
     \tableofcontents
 
-    \chapter{\LaTeX の世界にようこそ！}
+    \chapter{VSCodeとWSLで\LaTeX }
+        \section{WSLを使う利点}
+            \begin{enumerate}
+                \item Windowsの弱点であるCUI環境をカバーしてくれる
+                
+                \item 管理が楽ちん
+                
+                a
 
-    \section{インストール成功！}
-    \LaTeX の世界にようこそ！この文章が「dviout」というソフトで閲覧できていれば、
-    インストールに成功しています。
+            \end{enumerate}
+            
 
-    \LaTeX（ラテフ）もしくは\TeX（テフ）は、
-    組版処理を行うソフトウェアです。
-    数学者\index{すうがくしゃ@数学者}・コンピュータ科学者のドナルド・クヌース氏によって作られました。
+        \section{WSL設定}
+            \subsection{WSLのインストール}
+                PowerShellを管理者権限で起動し, 下記を入力する. 
+            
+            \subsection{\LaTeX のインストール}
+                \LaTeX（ラテフ）もしくは\TeX（テフ）は、
+                組版処理を行うソフトウェアです。
+                数学者・コンピュータ科学者のドナルド・クヌース氏によって作られました。
 
-    このソフトを使うと、きれいな文章の作成ができます。実際に出版の現場でも使われているそうです。
-    数学者が作ったということもあって、特に数式の出力がきれいにできるのが特徴です。
-    \begin{eqnarray}
-        & \displaystyle \lim _{x \rightarrow 1} \left( \frac{2}{x-1} - \frac{x+5}{x^3 -1} \right)\; ,\; 
-        & \displaystyle \int ^\pi _0 \cos ^2 (x)dx \nonumber
-    \end{eqnarray}
-    2つの数式が、きちんと表示されていますか？
-    複雑な数式が入った文章も、きれいに出力することができます。
+                このソフトを使うと、きれいな文章の作成ができます。実際に出版の現場でも使われているそうです。
+                数学者が作ったということもあって、特に数式の出力がきれいにできるのが特徴です。
+                \begin{eqnarray}
+                    & \displaystyle \lim _{x \rightarrow 1} \left( \frac{2}{x-1} - \frac{x+5}{x^3 -1} \right)\; ,\; 
+                    & \displaystyle \int ^\pi _0 \cos ^2 (x)dx \nonumber
+                \end{eqnarray}
+                2つの数式が、きちんと表示されていますか？
+                複雑な数式が入った文章も、きれいに出力することができます。
 
-    \section{基本手順}
+        \section{VSCodeの設定}
 
-    では、\LaTeX で文章を作る際の、基本的な手順をここに示します。
+            では、\LaTeX で文章を作る際の、基本的な手順をここに示します。
 
 
-    \begin{enumerate}
-        \item ソースファイルをTeraPadなどのエディタで作成する。
-        
-        ソース（素）となるファイルを作成します。これにはエディタと呼ばれるソフトを使います。
-        この地点では文章の形にはなっていません。
-        
-        \item ソースファイルをコンパイルして、dviファイルを作成する。
-        
-        パソコンに変換を命令して、先ほどつくったソースファイル
-        をdviファイルに変換、文章の形にして確認します。
-        
-        \item dviファイルができたことを確認したら、PDFに変換する。
-        
-        dvi形式は、あまり一般的ではありません。
-        そこで、Adobe Readerなどで閲覧ができるPDF形式に変換します。
-    
-    \end{enumerate}
+            \begin{enumerate}
+                \item ソースファイルをTeraPadなどのエディタで作成する。
+                
+                ソース（素）となるファイルを作成します。これにはエディタと呼ばれるソフトを使います。
+                この地点では文章の形にはなっていません。
+                
+                \item ソースファイルをコンパイルして、dviファイルを作成する。
+                
+                パソコンに変換を命令して、先ほどつくったソースファイル
+                をdviファイルに変換、文章の形にして確認します。
+                
+                \item dviファイルができたことを確認したら、PDFに変換する。
+                
+                dvi形式は、あまり一般的ではありません。
+                そこで、Adobe Readerなどで閲覧ができるPDF形式に変換します。
+            
+            \end{enumerate}
+
+    \chapter{Gitは便利だった}
 
 \end{document}
