@@ -8,5 +8,5 @@ VSCodeにLaTeX WorkShopをインストールし下記設定ファイルを入れ
 
 ### 更新
 Mac用settings.jsonを追加
-mac_settings.json
+mac_settings.json  
 → /Users/"ユーザ名"/Library/Application Support/Code/User/settings.json
