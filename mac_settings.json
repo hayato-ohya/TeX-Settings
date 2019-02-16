@@ -1,0 +1,26 @@
+{
+    "files.autoGuessEncoding": true,
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ptex2pdf*2",
+            "tools": [
+                "ptex2pdf",
+                "ptex2pdf"
+            ]
+        },
+    ]
+}
